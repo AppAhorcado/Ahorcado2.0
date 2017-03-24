@@ -46,7 +46,7 @@
         <item>lacrosse</item>
         <item>atletismo</item>
         <item>curling</item>
-        <item>sky</item>
+        <item>squi</item>
         <item>golf</item>
         <item>futbol</item>
         <item>boxeo</item>
@@ -123,7 +123,7 @@
 
     </string-array>
     <string-array name="peliculas">
-        <item></item>
+        <item>origen</item>
         <item>cincuenta sombras de grey</item>
         <item>airbag</item>
         <item>zona hostil</item>
