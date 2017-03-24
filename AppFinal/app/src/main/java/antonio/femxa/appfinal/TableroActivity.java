@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TableRow;
@@ -95,7 +94,7 @@ public class TableroActivity extends AppCompatActivity {
         fila3 = (fila3.getChildCount() == 0) ? null : fila3;
         fila4 = (fila4.getChildCount() == 0) ? null : fila4;
 
-        identificarEditText(fila1, fila2, fila3, fila4);
+        identificarTextView(fila1, fila2, fila3, fila4);
         ocultarEspacios(palabra);
 
         TextView textViewCategoria = (TextView) findViewById(R.id.textviewcategoria);
@@ -117,8 +116,9 @@ public class TableroActivity extends AppCompatActivity {
         {
             if (letrita == palabra.charAt(i))
             {
-                EditText et = (EditText)findViewById(i);
-                et.setText(letrita+"");
+                //EditText et = (EditText)findViewById(i);
+                TextView tv = (TextView) findViewById(i);
+                tv.setText(letrita+"");
                 Log.d("MENSAJE", "HA ENCONTRADO LA LETRA " + letrita);
 
             }
@@ -133,8 +133,9 @@ public class TableroActivity extends AppCompatActivity {
         {
             if (letrita == palabra.charAt(i))
             {
-                EditText et = (EditText)findViewById(i);
-                et.setVisibility(View.INVISIBLE);
+                //EditText et = (EditText)findViewById(i);
+                TextView tv = (TextView) findViewById(i);
+                tv.setVisibility(View.INVISIBLE);
                 Log.d("MENSAJE", "HA ENCONTRADO LA LETRA " + letrita);
 
             }
@@ -281,7 +282,9 @@ public class TableroActivity extends AppCompatActivity {
             }
         }
     }
-    public void identificarEditText(ViewGroup rowLugarInflado1, ViewGroup rowLugarInflado2, ViewGroup rowLugarInflado3, ViewGroup rowLugarInflado4)
+
+
+    public void identificarTextView(ViewGroup rowLugarInflado1, ViewGroup rowLugarInflado2, ViewGroup rowLugarInflado3, ViewGroup rowLugarInflado4)
     {
         int cont_aux = 0;
 
@@ -290,24 +293,26 @@ public class TableroActivity extends AppCompatActivity {
 
             for (int i = 0; i < rowLugarInflado1.getChildCount(); i++) {
                 ViewGroup linear = (ViewGroup) rowLugarInflado1.getChildAt(i);
-                EditText et = (EditText) linear.getChildAt(0);
-                et.setId(i);
+                //EditText et = (EditText) linear.getChildAt(0);
+                TextView tv = (TextView) linear.getChildAt(0);
+                tv.setId(i);
                 Log.d("MENSAJE", "editado EditText n: " + i);
-                Log.d("MENSAJE", "Id de EditText: " + et.getId());
+                Log.d("MENSAJE", "Id de EditText: " + tv.getId());
                 cont_aux++;
             }
 
-            //Log.d("MENSAJE", rowLugarInflado2.toString());
+            //  Log.d("MENSAJE", rowLugarInflado2.toString());
             if (rowLugarInflado2 != null) {
 
                 for (int i = 0; i < (rowLugarInflado2.getChildCount()); i++) {
 
                     ViewGroup linear = (ViewGroup) rowLugarInflado2.getChildAt(i);
-                    EditText et = (EditText) linear.getChildAt(0);
-                    Log.d("MENSAJE", et.toString());
-                    et.setId(cont_aux);
+                    //EditText et = (EditText) linear.getChildAt(0);
+                    TextView tv = (TextView) linear.getChildAt(0);
+                    Log.d("MENSAJE", tv.toString());
+                    tv.setId(cont_aux);
                     Log.d("MENSAJE", "editado EditText n: " + cont_aux);
-                    Log.d("MENSAJE", "Id de EditText: " + et.getId());
+                    Log.d("MENSAJE", "Id de EditText: " + tv.getId());
                     cont_aux++;
                 }
             } else {
@@ -319,10 +324,11 @@ public class TableroActivity extends AppCompatActivity {
                 cont_aux2 = cont_aux;
                 for (int i = 0; i < (rowLugarInflado3.getChildCount()); i++) {
                     ViewGroup linear = (ViewGroup) rowLugarInflado3.getChildAt(i);
-                    EditText et = (EditText) linear.getChildAt(0);
-                    et.setId(cont_aux);
+                    //EditText tv = (EditText) linear.getChildAt(0);
+                    TextView tv = (TextView) linear.getChildAt(0);
+                    tv.setId(cont_aux);
                     Log.d("MENSAJE", "editado EditText n: " + cont_aux);
-                    Log.d("MENSAJE", "Id de EditText: " + et.getId());
+                    Log.d("MENSAJE", "Id de EditText: " + tv.getId());
                     cont_aux++;
                 }
             } else {
@@ -334,10 +340,11 @@ public class TableroActivity extends AppCompatActivity {
                 cont_aux2 = cont_aux;
                 for (int i = 0; i < (rowLugarInflado4.getChildCount()); i++) {
                     ViewGroup linear = (ViewGroup) rowLugarInflado4.getChildAt(i);
-                    EditText et = (EditText) linear.getChildAt(0);
-                    et.setId(cont_aux);
+                    //EditText et = (EditText) linear.getChildAt(0);
+                    TextView tv = (TextView) linear.getChildAt(0);
+                    tv.setId(cont_aux);
                     Log.d("MENSAJE", "editado EditText n: " + cont_aux);
-                    Log.d("MENSAJE", "Id de EditText: " + et.getId());
+                    Log.d("MENSAJE", "Id de EditText: " + tv.getId());
                     cont_aux++;
                 }
             } else {
