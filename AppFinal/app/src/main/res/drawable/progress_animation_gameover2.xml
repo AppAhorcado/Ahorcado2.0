@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<animation-list android:id="@+id/selected1"
+<animation-list android:id="@+id/selected"
     android:oneshot="false"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/winner4" android:duration="100" />
-    <item android:drawable="@drawable/winner5" android:duration="100" />
     <item android:drawable="@drawable/winner6" android:duration="100" />
     <item android:drawable="@drawable/winner7" android:duration="100" />
     <item android:drawable="@drawable/winner8" android:duration="100" />

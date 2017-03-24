@@ -13,11 +13,10 @@
     android:background="@drawable/pantallainicio">
 
     <Spinner
-        android:layout_marginLeft="65dp"
-        android:layout_width="222dp"
-        android:layout_height="68dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="350dp"
+
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|center_horizontal"
         android:background="@android:color/white"
         android:id="@+id/spinner_categorias"
 

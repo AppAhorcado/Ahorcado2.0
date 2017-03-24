@@ -23,7 +23,7 @@ public class VictoriaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_victoria);
 
-        ImageView imageView = (ImageView) findViewById(R.id.imagenvictoria);
+        final ImageView imageView = (ImageView) findViewById(R.id.imagenvictoria);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1){
             imageView.setBackgroundResource(R.drawable.progress_animation_gameover2);
             AnimationDrawable progressAnimation = (AnimationDrawable) imageView.getBackground();

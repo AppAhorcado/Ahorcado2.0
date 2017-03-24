@@ -297,7 +297,7 @@ public class TableroActivity extends AppCompatActivity {
                 cont_aux++;
             }
 
-            Log.d("MENSAJE", rowLugarInflado2.toString());
+            //Log.d("MENSAJE", rowLugarInflado2.toString());
             if (rowLugarInflado2 != null) {
 
                 for (int i = 0; i < (rowLugarInflado2.getChildCount()); i++) {
@@ -381,6 +381,7 @@ public class TableroActivity extends AppCompatActivity {
     public void letraAcertada(Button button){
 
         button.setTextColor(Color.rgb(34, 153, 84));
+        button.setEnabled(false);
 
         Log.d("MENSAJE",contador_aciertos+" contador");
         Log.d("MENSAJE",tamaño_palabra+" tamaño");
@@ -416,8 +417,9 @@ public class TableroActivity extends AppCompatActivity {
             intent.putExtra("SonidoOn-Off",sonidoOnOff);
 
             startActivity(intent);
-        }
-        else
+        }//puede ocurrir que antes de que acabe el intent se pueda pulsar otra vez el boton, por lo tanto
+        //se pone el limitador de menor que 6 para que no se introduzca, en caso de haber pulsado otra vez, un 7
+        else if (contador <6)
         {
             ImageView imageView = (ImageView) findViewById(R.id.imagenes_ahorcado);
             imageView.setImageResource(array_pics[contador]);

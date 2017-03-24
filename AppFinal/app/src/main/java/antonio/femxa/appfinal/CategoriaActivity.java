@@ -49,7 +49,7 @@ public class CategoriaActivity extends Activity implements AdapterView.OnItemSel
 
         View v = findViewById(R.id.btnImagen);
         final ImageButton ib = (ImageButton) v;
-        
+
         mediaPlayer = MediaPlayer.create(this, R.raw.inicio);
         mediaPlayer.setLooping(true);
         mediaPlayer.setVolume(100, 100);
@@ -57,11 +57,11 @@ public class CategoriaActivity extends Activity implements AdapterView.OnItemSel
         if(musicaOnOff)
         {
             mediaPlayer.start();
-            ib.setImageResource(R.drawable.ic_volume_off);
+            ib.setImageResource(R.drawable.ic_volume_up);
         }
         else
         {
-            ib.setImageResource(R.drawable.ic_volume_up);
+            ib.setImageResource(R.drawable.ic_volume_off);
         }
 
         ponerMusica();
@@ -73,7 +73,7 @@ public class CategoriaActivity extends Activity implements AdapterView.OnItemSel
         View v = findViewById(R.id.btnImagen);
         final ImageButton ib = (ImageButton) v;
 
-       mediaPlayer.stop();
+        mediaPlayer.stop();
 
         if(!musicaOnOff)
             ib.setImageResource(R.drawable.ic_volume_up);
@@ -162,7 +162,7 @@ public class CategoriaActivity extends Activity implements AdapterView.OnItemSel
     }
 
 
-     public void ponerMusica() {
+    public void ponerMusica() {
         super.onStart();
 
 
